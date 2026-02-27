@@ -1,0 +1,36 @@
+import Link from "next/link";
+
+export default function Infobar() {
+  const marqueeText = (
+    <span className="text-black font-bold mx-4 uppercase tracking-wider text-xs">
+      ASTITVA 2026 IS HERE:{" "}
+      <Link href="/events" className="underline  cursor-pointer text-blue-500">
+        REGISTRATIONS
+      </Link>
+      &nbsp; Are OPEN! &nbsp;|&nbsp; Don&apos;t miss out on the biggest technical fest of the year! &nbsp;|&nbsp; ASTITVA 2026 IS HERE:{" "}
+    </span>
+  );
+
+  return (
+    <div className="w-full bg-[#deb3fa] py-2 overflow-hidden flex">
+      <div className="animate-marquee whitespace-nowrap flex min-w-full">
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {/* Duplicate for seamless scrolling */}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+        {marqueeText}
+      </div>
+    </div>
+  );
+}
