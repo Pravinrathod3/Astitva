@@ -19,17 +19,13 @@ import {
   useAnimationFrame,
 } from "motion/react";
 import Footer from "@/components/Footer";
-import NewsletterSupport from "@/components/NewsletterSupport";
-import Team from "@/components/Team";
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import FAQ from "@/components/FAQ";
 import Events from "@/components/Events";
 import Prizes from "@/components/Prizes";
-import AstitvaBuddy from "@/components/SignifiyaBuddy";
 import Sponsors from "@/components/Sponsors";
 import { APP_CONFIG } from "@/config/app.config";
-import CommunityPartner from "@/components/NewsletterSupport";
 
 const rampart = localFont({ src: "../../public/fonts/RampartOne-Regular.ttf" });
 const gilton = localFont({ src: "../../public/fonts/GiltonRegular.otf" });
@@ -366,15 +362,12 @@ export default function Home() {
           <Marquee />
           <Events />
           <Prizes />
-          <AstitvaBuddy />
           <Sponsors />
 
         </div>
         <div className="relative z-20 bg-black">
-          <Team />
         </div>
         <FAQ />
-        <CommunityPartner />
       </div>
       <Footer />
     </div>

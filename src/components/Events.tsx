@@ -17,16 +17,7 @@ import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 const gilton = localFont({ src: "../../public/fonts/GiltonRegular.otf" });
 const softura = localFont({ src: "../../public/fonts/Softura-Demo.otf" });
 
-const CATEGORIES = [
-  "ALL",
-  "ESPORTS",
-  "CSE",
-  "CIVIL",
-  "MECHANICAL",
-  "EEE",
-  "ROBOTICS",
-  "NON-TECH",
-];
+
 
 const EVENTS_DATA = getEventsListingData();
 const EVENT_TITLE_TO_SCHEDULE_ID = getEventTitleToScheduleId();
@@ -61,12 +52,7 @@ const EVENT_TITLE_TO_REG_ID: Record<string, string> = {
 };
 
 export default function Events() {
-  const [activeCategory, setActiveCategory] = useState("ALL");
-
-  const filteredEvents =
-    activeCategory === "ALL"
-      ? EVENTS_DATA
-      : EVENTS_DATA.filter((event) => event.category === activeCategory);
+  const filteredEvents = EVENTS_DATA;
 
   // Double the items for seamless loop
   const marqueeEvents = [...filteredEvents, ...filteredEvents];
@@ -84,13 +70,7 @@ export default function Events() {
   const dragStartOffsetRef = useRef(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Reset offset when category changes
-  useEffect(() => {
-    offsetRef.current = 0;
-    if (trackRef.current) {
-      trackRef.current.style.transform = `translate3d(0px, 0, 0)`;
-    }
-  }, [activeCategory]);
+
 
   useEffect(() => {
     const updateSingleSetWidth = () => {
@@ -130,7 +110,7 @@ export default function Events() {
       window.removeEventListener("resize", updateSingleSetWidth);
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
     };
-  }, [activeCategory]);
+  }, []);
 
   const nudgeByCards = (cards: number) => {
     if (!singleSetWidthRef.current || !trackRef.current) return;
@@ -234,21 +214,7 @@ export default function Events() {
           </div>
         </FadeIn>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4">
-          {CATEGORIES.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full border-2 border-black font-bold text-sm uppercase tracking-wider transition-all duration-200 ${activeCategory === category
-                ? "bg-black text-white shadow-[4px_4px_0px_0px_rgba(255,255,255,0.5)] translate-x-[2px] translate-y-[2px]"
-                : "bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                } ${softura.className}`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+
 
         {/* Marquee Controls + Track */}
         <div className="relative">
