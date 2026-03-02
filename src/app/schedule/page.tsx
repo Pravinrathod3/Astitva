@@ -20,45 +20,13 @@ const fallbackEventsData = getScheduleData();
 
 // EventCard component (Commented out for now)
 
-const EVENT_ID_MAP: Record<string, string> = {
-  "Valorant": "gaming",
-  "Free Fire": "freefire",
-  "Coding Premier League": "cpl",
-  "RE-FAB (Waste to Wealth)": "refab",
-  "Refab": "refab",
-  "Path Follower": "path",
-  "Bridge Building": "bridge",
-  "CIRCUITRONIX": "circuit",
-  "Dance Battle": "dance",
-  "Arm Wrestling": "arm",
-  "Tower Making": "tower",
-  "Dil Se Design": "design",
-  "Lathe War": "lathe",
-  "Robo Soccer": "robo",
-  "Rap Battle": "rap",
-  "BGMI": "bgmi",
-  "E-Football": "efootball",
-  "Treasure Hunt": "treasure",
-  "Power Deal": "powerdeal",
-  "Tech Monopoly": "techmonopoly",
-  "Carrom": "carrom",
-  "Chess": "chess",
-  "Volleyball": "volleyball",
-  "Cricket": "cricket",
-  "Badminton": "badminton",
-  "Football": "football",
-  "Box Cricket": "boxcricket",
-};
+
 
 const EventCard = ({ event, index }: { event: any; index: number }) => {
   const isTextLeft = index % 2 === 0;
   // Normalize title/eventTitle to uppercase before lookup so
   // variants like "Circuitronix" (mixed case) match keys like "CIRCUITRONIX"
-  const registrationId =
-    EVENT_ID_MAP[event.title] ||
-    EVENT_ID_MAP[event.eventTitle] ||
-    EVENT_ID_MAP[(event.title || "").toUpperCase()] ||
-    EVENT_ID_MAP[(event.eventTitle || "").toUpperCase()];
+ 
 
   return (
     <div
@@ -123,14 +91,14 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
           </div>
         )}
 
-        {registrationId && (
+        
           <Link
-            href={`/events?event=${registrationId}`}
+            href={`/events/${event.id}`}
             className="mt-6 inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-y-0.5 hover:shadow-none transition-all"
           >
             Register Now
           </Link>
-        )}
+        
       </div>
 
       <div className="relative w-full lg:w-1/2 flex justify-center items-center min-h-[400px]">
@@ -149,10 +117,6 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
                 className="object-cover"
               />
             </div>
-          </div>
-
-          <div className="absolute -bottom-10 -left-10 z-30 w-32 h-32 lg:w-48 lg:h-48 pointer-events-none drop-shadow-2xl">
-            <DotLottieReact src={event.lottie} loop autoplay />
           </div>
 
           <div className="absolute -top-6 -right-6 z-30 bg-black text-white w-14 h-14 flex items-center justify-center rounded-full font-bold text-2xl border-2 border-white shadow-lg">
