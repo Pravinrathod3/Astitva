@@ -151,7 +151,6 @@ export default function Navbar({
               className={`absolute top-full lg:top-0 right-0 lg:right-full mt-2 lg:mt-0 lg:pr-4 flex flex-col lg:flex-row items-stretch lg:items-center gap-2 lg:gap-3 transition-all duration-300 ease-out lg:group-hover/nav:opacity-100 lg:group-hover/nav:translate-y-0 lg:group-hover/nav:visible ${isMenuVisible ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 lg:-translate-y-4 invisible"}`}
             >
               {[
-                { name: "Gallery", href: "/gallery" },
                 { name: "Schedule", href: "/schedule" },
                 { name: "Events", href: "/#events" },
                 { name: "FAQ", href: "/#faq" },
