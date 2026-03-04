@@ -107,7 +107,7 @@ export const APP_CONFIG = {
 
   // Social Media Links
   social: {
-    instagram: "https://www.instagram.com/astitva/",
+    instagram: "https://www.instagram.com/astitva2k26?igsh=Z2Y2eHFnamZtdmt1",
     discord: "https://discord.com/invite/qP7YC9EDRZ",
     twitter: "#",
     youtube: "https://www.youtube.com/@ASTITVA/featured",

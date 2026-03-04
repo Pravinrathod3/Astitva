@@ -93,28 +93,11 @@ export default function SponsorsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <span className={`font-bold text-xl uppercase ${softura.className}`}>
-                  Tech Brochure
-                </span>
+
                 <span className="text-sm text-gray-600">Click to download</span>
               </a>
 
-              {/* Non-Tech Brochure */}
-              <a
-                href="/nontech.pdf"
-                download="SPONSORSHIP BROCHURE ASTITVA'26_NON-TECH.pdf"
-                className="bg-white text-black px-8 py-6 rounded-2xl border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all duration-200 flex flex-col items-center gap-3 min-w-[200px] sm:min-w-[250px] group"
-              >
-                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <span className={`font-bold text-xl uppercase ${softura.className}`}>
-                  Non-Tech Brochure
-                </span>
-                <span className="text-sm text-gray-600">Click to download</span>
-              </a>
+
             </div>
           </div>
         </div>
