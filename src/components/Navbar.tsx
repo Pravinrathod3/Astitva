@@ -62,7 +62,7 @@ export default function Navbar({
         <div className="fixed top-16 left-8 bg-black text-black rounded-full flex items-center justify-center transition-transform duration-300  active:scale-95 active:shadow-none z-50">
           <Link href="/">
             <Image
-              src="/logo2.png"
+              src="/astitva_logo_no_bg.png"
               alt="Logo"
               width={64}
               height={64}

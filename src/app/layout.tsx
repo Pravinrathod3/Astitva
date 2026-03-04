@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "ASTITVA 2026",
     images: [
       {
-        url: "/logo2.png",
+        url: "/astitva_logo_no_bg.png",
         width: 1200,
         height: 630,
         alt: "ASTITVA 2026",
@@ -73,12 +73,12 @@ export const metadata: Metadata = {
     title: "ASTITVA 2026 | National Level Technical Event",
     description:
       "Official website of ASTITVA 2026, organized by DYPIT Pimpri.",
-    images: ["/logo2.png"],
+    images: ["/astitva_logo_no_bg.png"],
   },
   icons: {
-    icon: "/logo2.png",
-    shortcut: "/logo2.png",
-    apple: "/logo2.png",
+    icon: "/astitva_logo_no_bg.png",
+    shortcut: "/astitva_logo_no_bg.png",
+    apple: "/astitva_logo_no_bg.png",
   },
 };
 

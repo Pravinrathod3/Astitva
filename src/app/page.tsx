@@ -267,7 +267,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/logo2.png"
+                src="/astitva_logo_no_bg.png"
                 alt=""
                 fill
                 className="object-contain"

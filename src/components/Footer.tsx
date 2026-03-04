@@ -223,23 +223,7 @@ export default function Footer() {
                   </span>
                   <span className="text-black text-[10px] font-medium leading-tight">
                     Designed and Developed by{" "}
-                    <a
-                      href="https://arddev.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline hover:text-gray-700 transition-colors"
-                    >
-                      ard.dev
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      href="https://subham12r.me"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline hover:text-gray-700 transition-colors"
-                    >
-                      subham12r
-                    </a>
+                    Pravin
                   </span>
                 </div>
               </div>

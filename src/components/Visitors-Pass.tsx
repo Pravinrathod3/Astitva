@@ -61,13 +61,7 @@ export default function VisitorCard({
         >
           {/* Background */}
           <div className="absolute top-0 left-0 w-full h-full pb-20 z-0">
-            <Image
-              src="/logo2.png"
-              alt="Astitva Logo"
-              width={50}
-              height={50}
-              className="absolute top-2 left-2 bg-transparent backdrop-blur-3xl outline-white/10 outline rounded-full"
-            />
+            <Image src="/astitva_logo_no_bg.png" alt="Astitva Logo" width={50} height={50} className="absolute top-2 left-2 bg-transparent backdrop-blur-3xl outline-white/10 outline rounded-full" />
             <video
               src="/bg.mp4"
               className="w-full h-50 object-cover"

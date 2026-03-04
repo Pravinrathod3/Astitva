@@ -26,7 +26,7 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
   const isTextLeft = index % 2 === 0;
   // Normalize title/eventTitle to uppercase before lookup so
   // variants like "Circuitronix" (mixed case) match keys like "CIRCUITRONIX"
- 
+
 
   return (
     <div
@@ -91,14 +91,16 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
           </div>
         )}
 
-        
-          <Link
-            href={`/events/${event.id}`}
-            className="mt-6 inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-y-0.5 hover:shadow-none transition-all"
-          >
-            Register Now
-          </Link>
-        
+
+        <Link
+          href="https://engg.dypvp.edu.in/astitva-2026.aspx"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-y-0.5 hover:shadow-none transition-all"
+        >
+          Register Now
+        </Link>
+
       </div>
 
       <div className="relative w-full lg:w-1/2 flex justify-center items-center min-h-[400px]">

@@ -327,11 +327,14 @@ export default function Events() {
                             View Details
                           </Link>
                         )}
-                        <div
-                          className={`w-full bg-zinc-400 text-white border-2 border-black rounded-xl py-1.5 sm:py-2 font-bold uppercase text-xs sm:text-sm text-center ${softura.className}`}
+                        <Link
+                          href="https://engg.dypvp.edu.in/astitva-2026.aspx"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`w-full bg-[#ffde59] text-black border-2 border-black rounded-xl py-1.5 sm:py-2 font-bold uppercase text-xs sm:text-sm text-center hover:bg-[#ffcd00] transition-colors ${softura.className}`}
                         >
-                          Registration Closed
-                        </div>
+                          Register Now
+                        </Link>
                       </div>
                     </div>
                   </article>

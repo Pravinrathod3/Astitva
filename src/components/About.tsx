@@ -58,7 +58,7 @@ export default function About() {
                 {/* Image Placeholder Section (Left) */}
                 <div className="flex-1 bg-white rounded-[2.5rem] relative overflow-hidden flex items-center justify-center min-h-[400px] border-4 border-black">
                     <Image
-                        src="/entc.jpeg"
+                        src="/entc-dept.jpg"
                         alt="ENTC Department"
                         fill
                         className="object-cover"

@@ -50,31 +50,22 @@ export default function Sponsors() {
 
                         {/* Horizontal Logo Layout */}
                         <div className="flex flex-row flex-wrap items-center justify-center gap-12 py-4">
-                            {/* CSI Logo */}
+                            {/* ECC Club Logo */}
                             <Image
-                                src="/csi.avif"
-                                alt="CSI - Computer Society of India"
+                                src="/ecc-club.jpg"
+                                alt="ECC Club"
                                 width={200}
                                 height={90}
-                                className="h-20 w-auto object-contain"
+                                className="h-24 w-auto object-contain"
                             />
 
-                            {/* ACM Logo */}
+                            {/* Raptors Logo */}
                             <Image
-                                src="/acmlogo.png"
-                                alt="ACM - Association for Computing Machinery"
-                                width={250}
-                                height={100}
-                                className="h-30 w-auto object-contain"
-                            />
-
-                            {/* Cerkle Logo */}
-                            <Image
-                                src="/cerkle.avif"
-                                alt="Cerkle"
+                                src="/Raptors_logo.png"
+                                alt="Raptors"
                                 width={200}
                                 height={90}
-                                className="h-20 w-auto object-contain"
+                                className="h-32 w-auto object-contain"
                             />
                         </div>
                     </div>

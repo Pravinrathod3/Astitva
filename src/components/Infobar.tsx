@@ -4,7 +4,7 @@ export default function Infobar() {
   const marqueeText = (
     <span className="text-black font-bold mx-4 uppercase tracking-wider text-xs">
       ASTITVA 2026 IS HERE:{" "}
-      <Link href="/events" className="underline  cursor-pointer text-blue-500">
+      <Link href="https://engg.dypvp.edu.in/astitva-2026.aspx" target="_blank" className="underline cursor-pointer text-blue-500">
         REGISTRATIONS
       </Link>
       &nbsp; Are OPEN! &nbsp;|&nbsp; Don&apos;t miss out on the biggest technical fest of the year! &nbsp;|&nbsp; ASTITVA 2026 IS HERE:{" "}

@@ -32,7 +32,7 @@ const FAQs = [
   },
   {
     question: "How can I register for the events?",
-    answer: "Registration details are available on our official portal. You can explore individual event rules and participation fees in the Events section."
+    answer: "Registration details are available on our official portal at https://engg.dypvp.edu.in/astitva-2026.aspx. You can also explore individual event details and rules in the Events section of this website."
   }
 ];
 
