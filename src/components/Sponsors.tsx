@@ -67,6 +67,22 @@ export default function Sponsors() {
                                 height={90}
                                 className="h-32 w-auto object-contain"
                             />
+
+                            <Image
+                                src="/IETE.png"
+                                alt="IETE"
+                                width={200}
+                                height={90}
+                                className="h-28 w-auto object-contain"
+                            />
+
+                            <Image
+                                src="/TESA.jpeg"
+                                alt="IETE"
+                                width={200}
+                                height={120}
+                                className="h-28 w-auto object-contain"
+                            />
                         </div>
                     </div>
                 </FadeIn>
