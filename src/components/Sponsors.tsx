@@ -81,7 +81,7 @@ export default function Sponsors() {
                                 alt="IETE"
                                 width={200}
                                 height={120}
-                                className="h-28 w-auto object-contain"
+                                className="h-34 w-auto object-contain"
                             />
                         </div>
                     </div>

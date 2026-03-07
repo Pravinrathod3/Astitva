@@ -37,6 +37,8 @@ export type MasterEvent = {
   lottie?: string;
   color?: string;
   teamMember?: string;
+  /** URL to the rule book PDF */
+  ruleBookUrl?: string;
   /** If true, this event will be excluded from the public events listing (but can still appear on the schedule) */
   excludeFromListing?: boolean;
 };
@@ -82,12 +84,13 @@ export const ALL_EVENTS: MasterEvent[] = [
     time: "11:00 AM onwards",
     venue: "Passage from Canteen to Main Gate",
     coordinators: "Anand katral",
+    ruleBookUrl: "/Drone.pdf",
     lottie: "https://lottie.host/8fe04dad-d3fa-4254-93b7-304f52d3c857/yxrz9HKunG.lottie",
     color: "bg-blue-50",
   },
   {
     id: 2,
-    title: "Line Follower",
+    title: "Trace the Track",
     category: "TECHNICAL",
     department: "ENTC",
     teamMember: "Max 5 members",
@@ -100,6 +103,7 @@ export const ALL_EVENTS: MasterEvent[] = [
     time: "11:00 AM onwards",
     venue: "Room 609 & 611",
     coordinators: "Arvind Rao",
+    ruleBookUrl: "/Trace the Track.pdf",
     lottie: "https://lottie.host/927b9dd7-f2e5-471e-b14e-6d7402af9a9e/wzqLaYST4c.lottie",
     color: "bg-red-50",
   },
@@ -120,6 +124,7 @@ export const ALL_EVENTS: MasterEvent[] = [
     time: "10:00 AM onwards",
     venue: "A Wing Engineering – Complete Parking Area",
     coordinators: "Atharv Kurade",
+    ruleBookUrl: "/Robo-Soccer.pdf",
     lottie: "https://lottie.host/8fe04dad-d3fa-4254-93b7-304f52d3c857/yxrz9HKunG.lottie",
     color: "bg-green-50",
   },
@@ -138,6 +143,7 @@ export const ALL_EVENTS: MasterEvent[] = [
     time: "10:00 AM onwards",
     venue: "A Wing Engineering – Complete Parking Area",
     coordinators: "Utkarsh Singh",
+    ruleBookUrl: "/Robo-Race.pdf",
     lottie: "https://lottie.host/84997780-9072-40eb-bf3c-b02910fa01ef/C7GW3im1LR.lottie",
     color: "bg-indigo-50",
   },
@@ -157,6 +163,7 @@ export const ALL_EVENTS: MasterEvent[] = [
     venue: "B Wing – 6th Floor",
     coordinators: "Sumeet Yadav ",
     facultyCoordinators: "Armaan Shaikh",
+    ruleBookUrl: "/Debug Hackathon Rules and regulations.pdf",
     lottie: "https://lottie.host/5d55c618-6fa5-489d-82bf-a9e561c64414/w57drvo4fH.lottie",
     color: "bg-purple-50",
   },
@@ -199,6 +206,7 @@ export type ScheduleEventItem = {
   lottie: string;
   color: string;
   teamMember: string;
+  ruleBookUrl?: string;
   excludeFromListing?: boolean;
 };
 
@@ -224,6 +232,7 @@ export function getScheduleData(): DayData[] {
     lottie: e.lottie || "",
     color: e.color || "bg-white",
     teamMember: e.teamMember || "",
+    ruleBookUrl: e.ruleBookUrl,
     excludeFromListing: e.excludeFromListing || false,
   });
 
@@ -246,6 +255,7 @@ export type EventListingItem = {
   image: string;
   prizePool: string;
   price?: number;
+  ruleBookUrl?: string;
 };
 
 /** Derive events listing data from master events */
@@ -253,7 +263,7 @@ export function getEventsListingData(): EventListingItem[] {
   // Prices for events by exact title (fallback to 0 if missing)
   const PRICE_BY_TITLE: Record<string, number> = {
     "Drone Arena": 1000,
-    "Line Follower": 350,
+    "Trace the Track": 350,
     "Robo Race": 350,
     "Robo Soccer": 350,
     "Debug Hackathon": 300,
@@ -267,6 +277,7 @@ export function getEventsListingData(): EventListingItem[] {
     image: e.image,
     prizePool: e.prizePool,
     price: PRICE_BY_TITLE[e.title] ?? 0,
+    ruleBookUrl: e.ruleBookUrl,
   }));
 }
 

@@ -335,6 +335,15 @@ export default function Events() {
                         >
                           Register Now
                         </Link>
+                        {event.ruleBookUrl && (
+                          <a
+                            href={event.ruleBookUrl}
+                            download
+                            className={`w-full bg-white text-black border-2 border-black rounded-xl py-1.5 sm:py-2 font-bold uppercase text-xs sm:text-sm text-center hover:bg-gray-100 transition-colors ${softura.className}`}
+                          >
+                            Rule Book
+                          </a>
+                        )}
                       </div>
                     </div>
                   </article>

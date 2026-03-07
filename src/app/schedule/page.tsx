@@ -92,14 +92,25 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
         )}
 
 
-        <Link
-          href="https://engg.dypvp.edu.in/astitva-2026.aspx"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-y-0.5 hover:shadow-none transition-all"
-        >
-          Register Now
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 mt-6">
+          <Link
+            href="https://engg.dypvp.edu.in/astitva-2026.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:translate-y-0.5 hover:shadow-none transition-all"
+          >
+            Register Now
+          </Link>
+          {event.ruleBookUrl && (
+            <a
+              href={event.ruleBookUrl}
+              download
+              className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-white text-black font-bold text-lg rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] hover:translate-y-0.5 hover:shadow-none transition-all"
+            >
+              Rule Book
+            </a>
+          )}
+        </div>
 
       </div>
 
@@ -233,7 +244,7 @@ export default function Schedule() {
       </div> */}
 
       {/* Hero Section - Preserved Layout, Updated "Container" Style */}
-      <div className="bg-gradient-to-b from-purple-950 via-purple-600 to-purple-100 min-h-[85vh] p-6 w-full rounded-[2rem] flex flex-col justify-center items-center relative overflow-hidden mb-8">
+      <div className="bg-linear-to-b from-purple-950 via-purple-600 to-purple-100 min-h-[85vh] p-6 w-full rounded-[2rem] flex flex-col justify-center items-center relative overflow-hidden mb-8">
         <div className="z-10 flex flex-col items-center">
           <h1 className={`text-[18vw] lg:text-[12vw] tracking-wider text-white leading-none text-center select-none ${gilton.className}`}>
             Schedule
