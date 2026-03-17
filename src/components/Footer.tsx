@@ -222,7 +222,7 @@ export default function Footer() {
                   </span>
                   <span className="text-black text-[10px] font-medium leading-tight">
                     Designed and Developed by{" "}
-                    Pravin
+                    Pravin and Nayan
                   </span>
                 </div>
               </div>
