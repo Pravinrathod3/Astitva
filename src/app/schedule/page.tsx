@@ -42,7 +42,7 @@ const EventCard = ({ event, index }: { event: any; index: number }) => {
             {event.department}
           </span>
           <span className="px-3 py-1.5 text-sm font-mono font-bold text-black border-2 border-black bg-zinc-200 rounded-lg">
-            #{index + 1 < 10 ? `0${index + 1}` : index + 1}
+            #{event.pointNo || index + 1 < 10 ? `0${event.pointNo || index + 1}` : event.pointNo || index + 1}
           </span>
         </div>
 
